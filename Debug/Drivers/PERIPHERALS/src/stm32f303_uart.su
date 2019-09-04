@@ -1,0 +1,12 @@
+core_cm4.h:1467:22:NVIC_EnableIRQ	16	static
+core_cm4.h:1520:22:NVIC_ClearPendingIRQ	16	static
+stm32f303_uart.c:23:6:PERIPH_USART_Init	32	static
+stm32f303_uart.c:75:6:PERIPH_USART_GetChar	24	static
+stm32f303_uart.c:88:8:PERIPH_USART_GetString	24	static
+stm32f303_uart.c:108:6:PERIPH_USART_RegisterRxCallback	16	static
+stm32f303_uart.c:116:6:PERIPH_USART_RXService	8	static
+stm32f303_uart.c:132:6:PERIPH_USART_putc	24	static
+stm32f303_uart.c:144:6:PERIPH_USART_puts	24	static
+stm32f303_uart.c:153:6:USART1_IRQHandler	16	static
+stm32f303_uart.c:204:6:USART2_IRQHandler	4	static
+stm32f303_uart.c:209:6:USART3_IRQHandler	4	static

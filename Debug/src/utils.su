@@ -1,0 +1,3 @@
+utils.c:17:5:_write	24	static
+utils.c:27:6:GPIO_init	4	static
+utils.c:45:6:RCC_Init	4	static

@@ -5,8 +5,9 @@
 #include <string.h>
 
 #include "../Drivers/PERIPHERALS/inc/stm32f303_uart.h"
-static void RCC_Init();
-static void GPIO_init();
+#include "../Drivers/PERIPHERALS/inc/stm32f303_i2c.h"
+
+#include "utils.h"
 
 volatile uint32_t timer = 0;
 
@@ -35,6 +36,7 @@ int main(void)
   SysTick_Config(72000000UL / 1000);
   PERIPH_USART_Init(USART1, &usart1, 115200);
   PERIPH_USART_RegisterRxCallback(&usart1,USART1_RX_Callback);
+  I2C_init();
 
   while (1)
   {
@@ -48,7 +50,7 @@ int main(void)
 		  GPIOE->ODR |= shift;
 		  shift <<= 1;
 		  if(shift == 0x10000) shift = 0x0100;
-
+		  I2C_readByte(0b01110110);
 	  }
   }
 }
