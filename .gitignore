@@ -1,0 +1,8 @@
+.cproject
+.project
+.settings/
+Debug/
+Drivers/CMSIS/
+STM32F3_DISCOVERY_READ_ME_FIRST.txt
+bme280_test.elf.launch
+stm32f30_flash.ld
