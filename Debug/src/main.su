@@ -1,5 +1,6 @@
 core_cm4.h:1550:22:NVIC_SetPriority	16	static
 core_cm4.h:1677:26:SysTick_Config	16	static
-main.c:14:6:SysTick_Handler	4	static
-main.c:21:6:USART1_RX_Callback	16	static
-main.c:31:5:main	8	static
+main.c:15:6:SysTick_Handler	4	static
+main.c:22:6:USART1_RX_Callback	16	static
+main.c:32:6:i2c_cllback	16	static
+main.c:39:5:main	8	static

@@ -1,6 +1,8 @@
-stm32f303_i2c.c:11:6:I2C_init	4	static
-stm32f303_i2c.c:28:6:I2C_Scanner	4	static
-stm32f303_i2c.c:33:6:I2C_writeByte	16	static
-stm32f303_i2c.c:48:6:I2C_writeNBytes	16	static
-stm32f303_i2c.c:68:9:I2C_readByte	24	static
-stm32f303_i2c.c:85:11:I2C_readNBytes	24	static
+stm32f303_i2c.c:13:6:I2C_init	4	static
+stm32f303_i2c.c:30:6:I2C_registerDeviceFoundCallback	16	static
+stm32f303_i2c.c:38:6:I2C_Scanner	16	static
+stm32f303_i2c.c:76:6:I2C_writeByte	16	static
+stm32f303_i2c.c:91:6:I2C_writeNBytes	16	static
+stm32f303_i2c.c:111:9:I2C_readByte	24	static
+stm32f303_i2c.c:128:11:I2C_readNBytes	24	static
+stm32f303_i2c.c:149:11:I2C_readNBytesFromAddress	24	static

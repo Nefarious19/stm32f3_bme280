@@ -6,6 +6,7 @@
 
 #include "../Drivers/PERIPHERALS/inc/stm32f303_uart.h"
 #include "../Drivers/PERIPHERALS/inc/stm32f303_i2c.h"
+#include "../BME280/bme280_defs.h"
 
 #include "utils.h"
 
@@ -28,6 +29,13 @@ void USART1_RX_Callback (void)
 	free(ptr);
 }
 
+void i2c_cllback (uint8_t address)
+{
+	printf("Device found @ addr: 0x%x\r\n", address);
+}
+
+uint8_t buffer[0x5E] = { 0 };
+
 int main(void)
 {
 
@@ -36,7 +44,11 @@ int main(void)
   SysTick_Config(72000000UL / 1000);
   PERIPH_USART_Init(USART1, &usart1, 115200);
   PERIPH_USART_RegisterRxCallback(&usart1,USART1_RX_Callback);
+
   I2C_init();
+  I2C_registerDeviceFoundCallback(i2c_cllback);
+
+  I2C_readNBytesFromAddress(BME280_DEVICE_I2C_ADDRESS,0xD0,buffer,1);
 
   while (1)
   {
@@ -50,7 +62,7 @@ int main(void)
 		  GPIOE->ODR |= shift;
 		  shift <<= 1;
 		  if(shift == 0x10000) shift = 0x0100;
-		  I2C_readByte(0b01110110);
+
 	  }
   }
 }
